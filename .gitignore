@@ -1,5 +1,6 @@
 # DB
 json.sqlite
+data/
 
 # Logs
 logs
