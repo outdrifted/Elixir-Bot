@@ -1,0 +1,11 @@
+{
+	"ownerid": "243436321018871810",
+	"ownerid_alt": "318383492172087297",
+	"default_cooldown": 3,
+	"default_cooldown_vc": 20,
+	"colors": {
+		"error": "ff0000",
+		"warn": "ff781f",
+		"ok": "07c40d"
+	}
+}
