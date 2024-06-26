@@ -1,8 +1,6 @@
 # DB
 json.sqlite
-data/steam_ids.json
-data/guilds.json
-data/config.json
+data/
 
 # Logs
 logs
