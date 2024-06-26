@@ -1,6 +1,8 @@
 # DB
 json.sqlite
-/data
+data/steam_ids.json
+data/guilds.json
+data/config.json
 
 # Logs
 logs
@@ -132,4 +134,3 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
-/data
