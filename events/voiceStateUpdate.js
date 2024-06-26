@@ -1,18 +1,12 @@
-//const guilds = require('../data/guilds.json');
-//const db = require('quick.db');
-//const { ownerid, default_cooldown_vc } = require('../data/config.json');
-
-import guilds from '../data/guilds.json' with { type: "json" };
-const { QuickDB } = await import("quick.db");
-const db = new QuickDB();
 import { PermissionFlagsBits, ChannelType } from 'discord.js';
+import guilds from '../data/guilds.json' with { type: "json" };
 import config from '../data/config.json' with { type: "json" };
 const ownerid = config.ownerid; const default_cooldown_vc = config.default_cooldown_vc;
+const { QuickDB } = await import("quick.db");
+const db = new QuickDB();
 
 export default {
-	execute(os, ns, client) {
-		// vcc (channels) syntax = { '1255536377454526497': { owner: '243436321018871810', guild: '702127865713393755' }
-		// vcs (settings) syntax =  
+	execute(os, ns, client) { 
 		if (!guilds[os.guild.id] || !guilds[os.guild.id].enabled) return;
 		
 		if (os.channelId && ns.channelId) {
@@ -43,11 +37,8 @@ export default {
 					limit: channel.userLimit,
 					ow: channel.permissionOverwrites
 				})
-
 				
-	
-				await db.delete(`vcc.${channel.id}`)
-				
+				await db.delete(`vcc.${channel.id}`);
 				await channel.delete().catch(() => {});
 			}
 
@@ -106,8 +97,6 @@ export default {
 			if (os.channelId == guilds[os.guild.id].vc.channel) return;
 			if (channel.members.keyArray().length) return;
 			if (!await db.get(`vcc.${os.channelId}`)) return;
-
-			//console.log(channel.permissionOverwrites);
 
 			await db.set(`vcs.${await db.get(`vcc.${os.channelId}.owner`)}`, {
 				name: channel.name,
