@@ -33,17 +33,17 @@ const rest = new REST().setToken(token);
         
         // Guild only:
         //
-		const data = await rest.put(
-			Routes.applicationGuildCommands(clientId, guildId),
-			{ body: commands },
-		);
+		// const data = await rest.put(
+		// 	Routes.applicationGuildCommands(clientId, guildId),
+		// 	{ body: commands },
+		// );
 
         // Global commands:
         //
-        // const data = await rest.put(
-        //     Routes.applicationCommands(clientId),
-        //     { body: commands },
-        // );
+        const data = await rest.put(
+            Routes.applicationCommands(clientId),
+            { body: commands },
+        );
 
 		console.log(`Successfully reloaded ${data.length} application (/) commands.`);
 	} catch (error) {
