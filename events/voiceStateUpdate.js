@@ -1,7 +1,7 @@
 import { PermissionFlagsBits, ChannelType } from 'discord.js';
-import guilds from '../data/guilds.json' with { type: "json" };
-import config from '../data/config.json' with { type: "json" };
-const ownerid = config.ownerid; const default_cooldown_vc = config.default_cooldown_vc;
+import guilds from '../guilds.json' with { type: "json" };
+import 'dotenv/config';
+const ownerid = process.env.OWNER_ID; const default_cooldown_vc = process.env.VC_COOLDOWN;
 const { QuickDB } = await import("quick.db");
 const db = new QuickDB();
 
