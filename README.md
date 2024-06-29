@@ -7,7 +7,7 @@ Discord temporary voice channels bot, that allows users to dynamically create an
 * [Node.js and npm](https://nodejs.org/en)
 * [git](https://git-scm.com/downloads) (or download repository manually)
 
-## How to install
+## Setup guide
 ### Linux:
 * Clone the repository (``git clone https://github.com/outdrifted/custom-voice-channels-bot``)
 * Navigate to the repo (``cd Elixir-Bot``)
@@ -33,7 +33,7 @@ Discord temporary voice channels bot, that allows users to dynamically create an
         * `roles.blacklist` is the ID of the role, that is not permitted to create voice channels.
         * `vc.channel` is the channel that a user joins to create a voice channel.
         * `vc.category` is the category the channel specified above is in.
-    * In the bot's root directory, create a `.env` file. Contents:
+    * In the bot's root directory, create a `.env` file. Contents: (note: if you don't have a bot token, see the "Create bot" section to [create a bot](https://discord.com/developers/applications))
         ```
         # Credentials
         BOT_TOKEN=your_token
@@ -54,3 +54,6 @@ Discord temporary voice channels bot, that allows users to dynamically create an
     * While in the bot's directory, run it with: ``pm2 start bot.js``
     * Create startup script: ``pm2 startup``
     * Freeze process list: ``pm2 save``
+
+## Create bot
+Coming soon.
