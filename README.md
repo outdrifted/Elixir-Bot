@@ -9,7 +9,7 @@ Discord temporary voice channels bot, that allows users to dynamically create an
 
 ## How to install
 ### Linux:
-* Clone the repository (``git clone https://github.com/outdrifted/Elixir-Bot``)
+* Clone the repository (``git clone https://github.com/outdrifted/custom-voice-channels-bot``)
 * Navigate to the repo (``cd Elixir-Bot``)
 * Install all required NPM packages (``npm i``)
 * Configuration files:
